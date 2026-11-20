@@ -12,11 +12,11 @@ using System.Windows.Shapes;
 namespace OptiRed
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for WelcomeWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WelcomeWindow : Window
     {
-        public MainWindow()
+        public WelcomeWindow()
         {
             InitializeComponent();
         }
