@@ -21,5 +21,22 @@ namespace OptiRed
         {
             InitializeComponent();
         }
+
+
+
+        private void txtDatapath_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnFiltrarPasajeros_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -9,7 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Executables\" />
+    <None Remove="mogus.jpg" />
+	<Folder Include="Executables\" />
+    <Resource Include="mogus.jpg" />
   </ItemGroup>
 
 </Project>

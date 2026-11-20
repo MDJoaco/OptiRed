@@ -6,7 +6,59 @@
         xmlns:local="clr-namespace:OptiRed"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FF242424">
+        <Menu DockPanel.Dock ="Top" Padding="5" VerticalAlignment="Top" Background="#FF9E9E9E">
+            <MenuItem Header="_Archivo">
+                <MenuItem Header="_Nuevo Proyecto" InputGestureText="Ctrl+N"></MenuItem>
+                <MenuItem Header="_Abrir Proyecto" InputGestureText="Ctrl+O"></MenuItem>
+                <MenuItem Header="Guardar Como" InputGestureText="Ctrl+Shift+S"></MenuItem>
+                <MenuItem Header="_Guardar" InputGestureText="Ctrl+S"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Editar"></MenuItem>
+            <MenuItem Header="Vista"></MenuItem>
+            <MenuItem Header="Mostrar consola"></MenuItem>
+            <MenuItem Header="Ayuda">
+                <MenuItem Header="Aqui habria docmunetación si hubiera"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBlock x:Name="tbConsole" HorizontalAlignment="Center" Height="120" Margin="0,314,0,0" TextWrapping="Wrap" Text="cosas de consola..." VerticalAlignment="Top" Width="800" Background="Black" Foreground="White" FontFamily="Consolas" FontSize="14" d:IsHidden="True"/>
+        <Image x:Name="imgMap" HorizontalAlignment="Left" Height="250" Margin="535,43,0,0" VerticalAlignment="Top" Width="250" Source="/mogus.jpg">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/mogus.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+        <Grid x:Name="gridMainView" HorizontalAlignment="Left" Height="215" Margin="42,78,0,0" VerticalAlignment="Top" Width="448">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="107*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <DockPanel x:Name="dockDataPath" Height="26" VerticalAlignment="Top" Width="448" HorizontalAlignment="Center">
+            <Label x:Name="lblDataPath" Content="Pasajeros" Width="100" Foreground="White"/>
+
+            <TextBox x:Name="txtDataPath" TextWrapping="Wrap" Text="C:\carpeta\archivo.csv" Width="233" TextChanged="txtDatapath_TextChanged" FontSize="14" Height="26" AcceptsReturn="True"/>
+            <Button x:Name="btnDataPath" Content="📂" Width="29" Click="Button_Click"/>
+            <Button x:Name="btnFiltrarPasajeros" Content=":D" Width="40" Click="btnFiltrarPasajeros_Click"/>
+        </DockPanel>
+        <Button x:Name="btnEditVariables" Content="Modificar Variables" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="20" Width="105"/>
+        <Label x:Name="lblSelectedPasajeros" Content="Seleccionando %d pasajeros c:" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="296" Foreground="#FFBABABA" Margin="0,28,0,0"/>
+        <Grid x:Name="gridSettings" HorizontalAlignment="Center" Height="73" VerticalAlignment="Center" Width="370">
+            <DockPanel x:Name="dockAlgoritmoRutas" Height="26" LastChildFill="False" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label x:Name="lblAlgoritmoRutas" Content="Algoritmo" Width="137" Foreground="White"/>
+                <ComboBox x:Name="cbAlgoritmoRutas" Width="232" SelectedIndex="0">
+                    <ComboBoxItem x:Name="optAlgoPasajeros" Content="Priorizar Pasajeros"/>
+                    <ComboBoxItem x:Name="optAlgoDistancia" Content="Priorizar Distancia"/>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel x:Name="dockOutPath" Height="26" VerticalAlignment="Top" Width="370" HorizontalAlignment="Center" Margin="0,47,0,0">
+                <Label x:Name="lblOutPath" Content="Guardar en" Width="100" Foreground="White"/>
+
+                <TextBox x:Name="txtOutPath" TextWrapping="Wrap" Text="C:\carpeta\output\rutas.csv" Width="233" TextChanged="txtDatapath_TextChanged" FontSize="14" Height="26" AcceptsReturn="True"/>
+                <Button x:Name="btnOutPath" Content="📂" Width="29" Click="Button_Click"/>
+            </DockPanel>
+        </Grid>
+        <DockPanel HorizontalAlignment="Center" Height="25" LastChildFill="False" VerticalAlignment="Top" Width="800" d:IsHidden="True"/>
+        <Button x:Name="btnShowConsole" Content="Mostrar consola" VerticalAlignment="Top" HorizontalAlignment="Left" Height="25" Width="135" Margin="650,399,0,0"/>
+
     </Grid>
 </Window>
