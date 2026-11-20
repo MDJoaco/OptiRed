@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="mogus.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="mogus.jpg" />
+  </ItemGroup>
+
 </Project>
