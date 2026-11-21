@@ -20,8 +20,8 @@
         <Rectangle HorizontalAlignment="Center" Height="434" Grid.RowSpan="2" VerticalAlignment="Top" Width="325" Fill="#FF202020" Grid.Column="1"/>
         <Label x:Name="lblWelcome" Content="Bienvenido &#xD;&#xA;   de nuevo" HorizontalContentAlignment="Right" VerticalAlignment="Top" FontSize="54" HorizontalAlignment="Right" Height="197" Margin="0,106,37,0" Width="323" Grid.RowSpan="2"/>
 
-        <Button x:Name="btnNuevoProyecto" Grid.Column="1" Content="Nuevo Proyecto" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44" Width="236" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="24,90,0,0"/>
-        <Button x:Name="btnEditarProyecto" Grid.Column="1" Content="Editar Proyecto" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44" Width="236" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" Margin="24,180,0,0" Foreground="White"/>
+        <Button x:Name="btnNuevoProyecto" Grid.Column="1" Content="Nuevo Proyecto" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44" Width="236" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Margin="24,90,0,0" Click="btnNuevoProyecto_Click"/>
+        <Button x:Name="btnEditarProyecto" Grid.Column="1" Content="Editar Proyecto" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44" Width="236" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" Margin="24,180,0,0" Foreground="White" Click="btnEditarProyecto_Click"/>
         <Button x:Name="btnPreferencias" Grid.Column="1" Content="Preferencias" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44" Width="236" FontSize="24" Background="{x:Null}" BorderBrush="{x:Null}" Margin="24,32,0,0" Grid.Row="1" Foreground="White"/>
     </Grid>
 </Window>

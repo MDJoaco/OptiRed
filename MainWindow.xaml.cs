@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace OptiRed
 {
@@ -17,26 +7,30 @@ namespace OptiRed
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private string _projectFilePath;
+        private GeneradorRutas _generatorRutas;
+
+        public MainWindow(string projectFilePath)
         {
             InitializeComponent();
+            _projectFilePath = projectFilePath;
+            _generatorRutas = new GeneradorRutas("Executables", "optired-rutas.jar");
         }
 
-
-
-        private void txtDatapath_TextChanged(object sender, TextChangedEventArgs e)
+        private void Menu_ShowConsole_Toggle(object sender, RoutedEventArgs e)
         {
+            if (_generatorRutas.Running())
+            {
+                if (Menu_ShowConsole.IsChecked)
+                {
+                    _generatorRutas.ShowConsole();
+                    return;
+                }
 
-        }
+                _generatorRutas.HideConsole();
+            }
 
-        private void btnFiltrarPasajeros_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            Menu_ShowConsole.IsChecked = false;
         }
     }
 }
